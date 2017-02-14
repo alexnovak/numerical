@@ -2,6 +2,13 @@ import numpy as np
 from numpy.polynomial.polynomial import Polynomial
 import matplotlib.pyplot as plt
 
+"""
+Hello grader! The following functions represent the code that
+would be run for the corresponding problem. At the top are a series
+of function abstractions of the method that will accept a function
+pointer to perform the brunt of the work. Hope this works!
+"""
+
 def bisect(a, b, f, arr=False, ntrials=5):
     x = []
     fa = f(a)
@@ -139,5 +146,4 @@ def p6_c():
     res = newtonPoly(2.1, [3, 0, -3, 1], arr=True)
     print(res)
 
-if __name__ == '__main__':
-    p6_c()
+
