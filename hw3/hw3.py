@@ -38,9 +38,7 @@ def p1_c():
     x = np.pi/4
     x_ax = [10**(-h) for h in range(1, 17)]
     y_ax = [3.101766393836051 - (f(x + h) - f(x))/h for h in x_ax]
-    plt.set_yscale('log')
-    plt.set_xscale('log')
-    plt.scatter(x_ax, y_ax, 'ro')
+    plt.loglog(x_ax, y_ax, '-ro')
     plt.show()
 
 def p2_c():
@@ -127,6 +125,10 @@ def p7():
     plt.plot(sol[0][0], sol[1][0], 'ro')
     plt.show()
 
+# RESPONSE:
+# [[ 74.]
+#  [ 45.]]
+
 def p8():
     A = np.matrix([[  .125,   .25,  .5],
                    [     1,     1,   1],
@@ -140,10 +142,25 @@ def p8():
 
     print("Normal equation is: ")
     print(B)
-    print("by [a, b, c]^T = ")
+    print("by [a, b, c]^T] = ")
     print(bp)
     print("Which is solved by: ")
     print(solve(B, bp))
 
+# RESPONSE
+# Normal equation is:
+# [[ 320.546875  138.28125    61.1875  ]
+#  [ 138.28125    61.1875     28.125   ]
+#  [  61.1875     28.125      13.75    ]]
+# by [a, b, c]^T] =
+# [[ 9.02375]
+#  [ 4.3375 ]
+#  [ 2.285  ]]
+# Which is solved by:
+# [[ 0.05239669]
+#  [-0.27987013]
+#  [ 0.50547816]]
+
+
 if __name__ == "__main__":
-    p1_c()
+    p7()
